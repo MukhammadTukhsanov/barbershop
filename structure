@@ -1,0 +1,12 @@
+barbershop/
+├── app/
+│   ├── main.py
+│   ├── models.py
+│   └── database.py
+├── flutter/
+├── msql/
+│   └── init.sql
+├── docker-compose.yml
+├── Dockerfile
+├── README.md
+└── requirements.txt

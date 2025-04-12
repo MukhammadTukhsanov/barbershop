@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: barbershop-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: barbershop
+      MYSQL_USER: barber
+      MYSQL_PASSWORD: barberpass
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - barbershop-net
+
+networks:
+  barbershop-net:
+    driver: bridge
