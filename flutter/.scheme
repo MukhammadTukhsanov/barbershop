@@ -1,0 +1,48 @@
+lib/
+│
+├── main.dart
+├── app.dart                     # Инициализация роутов, тем, зависимостей
+├── core/
+│   ├── constants/               # Цвета, строки, стили, размеры иконок
+│   ├── utils/                   # Утилиты, хелперы, валидаторы
+│   ├── services/                # Firebase, OneSignal, LocalStorage
+│   └── widgets/                 # Общие виджеты (Button, Loader и т.д.)
+│
+├── models/                      # Модели: User, Appointment, Schedule и т.д.
+│
+├── providers/                  # Стейт-менеджмент (Riverpod/Provider/BLoC)
+│   ├── auth_provider.dart
+│   ├── appointment_provider.dart
+│   └── schedule_provider.dart
+│
+├── routes/
+│   ├── app_router.dart
+│   └── app_routes.dart         # go_router или auto_route конфиг
+│
+├── features/
+│   ├── auth/                   # Авторизация, регистрация
+│   │   ├── view/
+│   │   ├── controller/
+│   │   ├── widgets/
+│   │   └── login_page.dart
+│   │
+│   ├── client/                 # Модули для клиентов
+│   │   ├── home/
+│   │   ├── booking/
+│   │   ├── profile/
+│   │   └── widgets/
+│   │
+│   ├── admin/                  # Модули для барберов/админов
+│   │   ├── dashboard/
+│   │   │   └──admin_dashboard.dart
+│   │   ├── queue/
+│   │   ├── schedule/
+│   │   ├── stats/
+│   │   └── widgets/
+│   │
+│   └── common/                 # Модули, доступные всем
+│       ├── notifications/
+│       ├── settings/
+│       └── welcome_page.dart
+│
+└── l10n/                        # Локализация
