@@ -22,9 +22,16 @@ lib/
 ├── features/
 │   ├── auth/                   # Авторизация, регистрация
 │   │   ├── view/
+│   │   │   ├── sign_in_page.dart
+│   │   │   ├── sign_up_page.dart
+│   │   │   └── account_setup_page.dart
 │   │   ├── controller/
-│   │   ├── widgets/
-│   │   └── login_page.dart
+│   │   │   ├── auth_controller.dart       # Обработка логики входа/регистрации
+│   │   │   └── validators.dart            # Валидации e-mail, пароля и т.д.
+│   │   └── widgets/
+│   │       ├── auth_text_field.dart       # Общие поля ввода для Sign In/Up
+│   │       ├── password_field.dart
+│   │       └── auth_button.dart
 │   │
 │   ├── client/                 # Модули для клиентов
 │   │   ├── home/
@@ -41,6 +48,12 @@ lib/
 │   │   └── widgets/
 │   │
 │   └── common/                 # Модули, доступные всем
+│       ├── onboarding/
+│       │   ├── onboarding_page.dart
+│       │   ├── onboarding_controller.dart
+│       │   └── widgets/
+│       │       ├── onboarding_step.dart
+│       │       └── skip_button.dart
 │       ├── notifications/
 │       ├── settings/
 │       └── welcome_page.dart

@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final lightTheme = ThemeData(
+    fontFamily: 'JosefinSans',
     brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    primaryColor: Color(0xfffc9401),
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xfffc9401),
       foregroundColor: Colors.white,
     ),
     textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.black),
       bodyMedium: TextStyle(color: Colors.black),
     ),
-    iconTheme: const IconThemeData(color: Colors.blue),
+    iconTheme: const IconThemeData(color: Color(0xfffc9401)),
     colorScheme: const ColorScheme.light(
-      primary: Colors.blue,
+      primary: Color(0xfffc9401),
       secondary: Colors.orange, // Bu accentColor o‘rnini bosadi
     ),
   );

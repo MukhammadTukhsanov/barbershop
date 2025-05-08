@@ -54,6 +54,7 @@ dependencies:
 
   # 🧪 Dev
   flutter_launcher_icons: ^0.13.1
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -64,3 +65,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: JosefinSans
+      fonts:
+        - asset: assets/fonts/JosefinSans-Regular.ttf
+        - asset: assets/fonts/JosefinSans-Bold.ttf
+          weight: 700
+  assets:
+    - assets/images/

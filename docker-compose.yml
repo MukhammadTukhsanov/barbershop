@@ -6,16 +6,46 @@ services:
     container_name: barbershop-mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: barbershop
-      MYSQL_USER: barber
-      MYSQL_PASSWORD: barberpass
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - '3306:3306'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - barbershop-net
+
+  adminer:
+    image: adminer
+    container_name: barbershop-adminer
+    restart: always
+    ports:
+      - 8082:8080
+    networks:
+      - barbershop-net
+
+  app:
+    build: .
+    container_name: barbershop
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
+    depends_on:
+      - mysql
+    environment:
+      - DATABASE_URL=mysql+pymysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
+    networks:
+      - barbershop-net
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 networks:
   barbershop-net:
