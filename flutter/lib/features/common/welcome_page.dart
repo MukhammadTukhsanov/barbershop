@@ -26,7 +26,7 @@ class WelcomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(
                   context,
-                  AppRoutes.login,
+                  AppRoutes.signin,
                 ); // Auth sahifasiga o'tish
               },
               child: Text("Get Started"),

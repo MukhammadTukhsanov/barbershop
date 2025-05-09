@@ -1,0 +1,41 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "barbershop-line",
+          "appId": "1:1012428499740:android:c700061331fbfd57fb68d9",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "barbershop-line",
+          "appId": "1:1012428499740:ios:afbdc342be9f0c66fb68d9",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "barbershop-line",
+          "appId": "1:1012428499740:ios:afbdc342be9f0c66fb68d9",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "barbershop-line",
+          "configurations": {
+            "android": "1:1012428499740:android:c700061331fbfd57fb68d9",
+            "ios": "1:1012428499740:ios:afbdc342be9f0c66fb68d9",
+            "macos": "1:1012428499740:ios:afbdc342be9f0c66fb68d9",
+            "web": "1:1012428499740:web:1e0e0790ec2930dafb68d9",
+            "windows": "1:1012428499740:web:fe2e3c3e8db85676fb68d9"
+          }
+        }
+      }
+    }
+  }
+}

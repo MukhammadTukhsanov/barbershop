@@ -1,7 +1,7 @@
 import 'package:barbershop/features/admin/dashboard/admin_dashboard.dart';
-import 'package:barbershop/features/auth/login_page.dart';
 import 'package:barbershop/features/auth/view/sign_in_page.dart';
-import 'package:barbershop/features/client/client_home_page.dart';
+import 'package:barbershop/features/auth/view/sign_up_page.dart';
+import 'package:barbershop/features/client/home/view/home_page.dart';
 import 'package:barbershop/features/common/onboarding/onboarding_page.dart';
 import 'package:barbershop/features/common/welcome_page.dart';
 import 'package:barbershop/providers/onboarding_provider.dart';
@@ -42,8 +42,12 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => WelcomePage(),
       ),
       GoRoute(
-        path: AppRoutes.login,
-        builder: (context, state) => const LoginPage(),
+        path: AppRoutes.signin,
+        builder: (context, state) => const SignInPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.signup,
+        builder: (context, state) => const SignUpPage(),
       ),
       GoRoute(
         path: AppRoutes.clientHome,

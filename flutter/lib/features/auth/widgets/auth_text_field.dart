@@ -6,7 +6,7 @@ class AuthTextField extends StatelessWidget {
   final bool obscureText;
   final String? Function(String?)? validator;
   final TextInputType keyboardType;
-  final Icon? prefixIcon;
+  final IconData? prefixIcon;
 
   const AuthTextField({
     Key? key,
@@ -28,7 +28,7 @@ class AuthTextField extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Color(0xfffafafa),
-        prefixIcon: prefixIcon,
+        prefixIcon: Icon(prefixIcon, size: 18, color: Colors.primaries.last),
         hintText: hintText,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

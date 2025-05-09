@@ -35,6 +35,11 @@ lib/
 │   │
 │   ├── client/                 # Модули для клиентов
 │   │   ├── home/
+│   │   │   ├── view/
+│   │   │   │   └── home_page.dart
+│   │   │   ├── widgets/
+│   │   │   │   ├── discount_carousel.dart
+│   │   │   │   └── search_input.dart
 │   │   ├── booking/
 │   │   ├── profile/
 │   │   └── widgets/
